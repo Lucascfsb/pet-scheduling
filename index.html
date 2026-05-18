@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="./src/assets/icon.svg" />
+
+    <link rel="stylesheet" href="./src/styles/global.css" />
+
+    <title>Mundo Pet</title>
+  </head>
+  <body>
+    <div class="logo">
+      <i><img src="./src/assets/icon.svg" alt="Logo Mundo Pet" /></i>
+      <h1>MUNDO PET</h1>
+    </div>
+
+    <header class="header-calendar">
+      <h1>Sua agenda</h1>
+      <p>
+        Aqui você pode ver todos os clientes e serviços agendados para hoje.
+      </p>
+      <label for="date"></label>
+      <div>
+        <i><img src="" alt="" /></i>
+        <input type="date" id="date" name="date" />
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <header class="morning">
+          <i><img src="" alt="" /></i>
+          <h2>Manhã</h2>
+          <span>09h-12h</span>
+        </header>
+        <ul>
+          <li>
+            <span>9:00</span>
+            <p class="dog-owner"><strong>Cachorro</strong><span>Dono</span></p>
+            <p class="service">Serviço</p>
+            <a href="">Remover agendamento</a>
+          </li>
+        </ul>
+
+        <header class="evening">
+          <i><img src="" alt="" /></i>
+          <h2>Tarde</h2>
+          <span>13h-18h</span>
+        </header>
+        <ul aria-label="Horários disponíveis" class="free-schedule">
+          <li>
+            <span>13:00</span>
+            <p class="dog-owner"><strong>Cachorro</strong><span>Dono</span></p>
+            <p class="service">Serviço</p>
+            <a href="">Remover agendamento</a>
+          </li>
+          <li>
+            <span>14:00</span>
+            <p class="dog-owner"><strong>Cachorro</strong><span>Dono</span></p>
+            <p class="service">Serviço</p>
+            <a href="">Remover agendamento</a>
+          </li>
+        </ul>
+
+        <header class="night">
+          <i><img src="" alt="" /></i>
+          <h2>Noite</h2>
+          <span>18h-21h</span>
+        </header>
+        <ul>
+          <li>
+            <span>18:00</span>
+            <p class="dog-owner"><strong>Cachorro</strong><span>Dono</span></p>
+            <p class="service">Serviço</p>
+            <a href="">Remover agendamento</a>
+          </li>
+        </ul>
+
+        <button class="new-Schedule">Novo Agendamento</button>
+      </section>
+
+      <form>
+        <header class="header-form">
+          <h1>Agende um atendimento</h1>
+          <p>Preencha os dados do cliente para realizar o agendamento:</p>
+        </header>
+
+        <label for="tutor-name" class="label">Nome do tutor</label>
+        <div class="input">
+          <i><img src="./src/assets/" alt="tutor-name" /></i>
+          <input type="text" id="tutor-name" name="tutor-name" required />
+        </div>
+
+        <label for="pet-name" class="label">Nome do pet</label>
+        <div class="input">
+          <i><img src="./src/assets/" alt="pet-name" /></i>
+          <input type="text" id="pet-name" name="pet-name" required />
+        </div>
+
+        <label for="telephone" class="label">Telefone</label>
+        <div class="input">
+          <i><img src="./src/assets/" alt="telephone" /></i>
+          <input type="text" id="telephone" name="telephone" required />
+        </div>
+
+        <label for="description" class="label">Descrição</label>
+        <div class="input">
+          <i><img src="./src/assets/" alt="description" /></i>
+          <input type="text" id="description" name="description" required />
+        </div>
+
+        <label for="date" class="label">Data</label>
+        <div class="input">
+          <i><img src="./src/assets/" alt="date" /></i>
+          <input type="date" id="date" name="date" required />
+        </div>
+
+        <label for="hour" class="label">Hora</label>
+        <div class="input">
+          <i><img src="./src/assets/" alt="hour" /></i>
+          <input type="time" id="hour" name="hour" required />
+        </div>
+
+        <button type="submit">Agendar</button>
+      </form>
+    </main>
+  </body>
+</html>
