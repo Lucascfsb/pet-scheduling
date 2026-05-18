@@ -4,48 +4,176 @@
   box-sizing: border-box;
 }
 
-:root {  
-  /* Content */
-  --content-primary: #FFFFFF;
-  --content-secondary: #98959D;
+:root {
+  --content-primary: #ffffff;
+  --content-secondary: #98959d;
   --content-tertiary: #666666;
-  --content-brand: #9282FA;
+  --content-brand: #9282fa;
 
-  /* Background */
   --background-primary: #151515;
-  --background-secondary: #1E1E1E;
-  --background-tertiary: #23242C;
-  --background-brand: #9282FA;
-  --background-highlights: #BDB4FA;
+  --background-secondary: #1e1e1e;
+  --background-tertiary: #23242c;
+  --background-quaternary: #2e2c30;
+  --background-brand: #9282fa;
+  --background-highlights: #bdb4fa;
 
-  /* Border */
-  --border-primary: #3E3C41;
-  --border-secondary: #86818C;
-  --border-brand: #9282FA;
+  --border-primary: #3e3c41;
+  --border-secondary: #86818c;
+  --border-brand: #9282fa;
   --border-divisor: #353339;
 
-  /* Accent */
-  --accent-blue: #027DF0;
-  --accent-blue-light: #16487A;
-  --accent-yellow: #F0DC02;
-  --accent-yellow-light: #756E1B;
-  --accent-orange: #F09102;
-  --accent-orange-light: #75501B;
+  --accent-blue: #027df0;
+  --accent-blue-light: #16487a;
+  --accent-yellow: #f0dc02;
+  --accent-yellow-light: #756e1b;
+  --accent-orange: #f09102;
+  --accent-orange-light: #75501b;
 
-  /*Typography */
-  
-  --font-family-title: 'Inter Tight', sans-serif;
-  --font-family-body: 'Inter', sans-serif;
+  --font-family-title: "Inter Tight", sans-serif;
+  --font-family-body: "Inter", sans-serif;
+  --font-family-brand: "Familjen Grotesk", sans-serif;
 
-  /* Formato: peso tamanho/altura-da-linha família */
-  --title:            700 24px/32px var(--font-family-title); /* Bold */
-  
-  --paragraph-medium: 500 14px/24px var(--font-family-body);  /* Medium */
-  --paragraph-small:  500 12px/16px var(--font-family-body);  /* Medium */
-  
-  --label-large:      700 16px/24px var(--font-family-body);  /* Bold */
-  --label-medium:     700 14px/24px var(--font-family-body);  /* Bold */
-  --label-small:      700 12px/16px var(--font-family-body);  /* Bold */
-  
-  --link:             500 12px/16px var(--font-family-body);  /* Medium */
-} 
+  --title: 700 24px/32px var(--font-family-title); 
+  --inter: 400 16px/24px var(--font-family-title); 
+
+  --paragraph-medium: 500 14px/24px var(--font-family-body); 
+  --paragraph-small: 500 12px/16px var(--font-family-body); 
+
+  --label-large: 700 16px/24px var(--font-family-body); 
+  --label-medium: 700 14px/24px var(--font-family-body); 
+  --label-small: 700 12px/16px var(--font-family-body); 
+
+  --link: 500 12px/16px var(--font-family-body); 
+
+  --logo: 700 16px/24px var(--font-family-brand); 
+}
+
+body {
+  background: var(--background-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  background: var(--background-quaternary);
+  max-width: 160px;
+  gap: 2px;
+  padding: 12px 20px;
+  border-radius: 0 0 20px 0;
+
+  & h1 {
+    font: var(--logo);
+    color: var(--border-brand);
+  }
+}
+
+.header-calendar {
+  display: flex;
+  gap: 8px;
+
+  & .header-info {
+    & h1 {
+      font: var(--title);
+      color: var(--content-primary);
+    }
+
+    & p {
+      font: var(--paragraph-medium);
+      color: var(--content-secondary);
+    }
+  }
+
+  & .input-calendar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--background-tertiary);
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    padding: 8px 14px;
+    max-width: 200px;
+    position: relative;
+
+    & i img {
+      object-fit: contain;
+      border: none;
+    }
+
+    input[type="date"] {
+      background: transparent;
+      color: var(--content-secondary);
+      border: none;
+      outline: none;
+      font: var(--inter);
+      width: 100%;
+      padding: 0;
+      text-align: left;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Esconde o ícone padrão do input de data no Chrome */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      opacity: 0;
+      width: 100%;
+      height: 20px;
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    /* Placeholder para browsers que suportam */
+    input[type="date"]::placeholder {
+      color: var(--content-secondary);
+      opacity: 1;
+    }
+
+    /* Ajuste para o input de data no Firefox */
+    input[type="date"]::-moz-placeholder {
+      color: var(--content-secondary);
+      opacity: 1;
+    }
+
+    /* Remove setas do input de data no Edge/IE */
+    input[type="date"]::-ms-input-placeholder {
+      color: var(--content-secondary);
+      opacity: 1;
+    }
+
+    /* Ajuste para o icone de seta */
+    & .date-arrow {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    & .date-arrow img {
+      width: 20px;
+      height: 20px;
+      transition: opacity 0.2s ease;
+    }
+
+    & .date-arrow:hover img {
+      opacity: 0.7;
+    }
+  }
+}

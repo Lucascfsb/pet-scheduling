@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
 
@@ -22,21 +22,26 @@
     </div>
 
     <header class="header-calendar">
-      <h1>Sua agenda</h1>
-      <p>
-        Aqui você pode ver todos os clientes e serviços agendados para hoje.
-      </p>
-      <label for="date"></label>
-      <div>
-        <i><img src="" alt="" /></i>
-        <input type="date" id="date" name="date" />
+      <div class="header-info">
+        <h1>Sua agenda</h1>
+        <p>
+          Aqui você pode ver todos os clientes e serviços agendados para hoje.
+        </p>
+      </div>
+
+      <div class="input-calendar">
+        <i><img src="src/assets/calendar.svg" alt="Ícone de calendário" /></i>
+        <input type="date" id="header-date" name="header-date" />
+        <label class="date-arrow" for="header-date">
+          <img src="src/assets/arrowdown.svg" alt="Ícone de seta para baixo" />
+        </label>
       </div>
     </header>
 
     <main>
       <section>
         <header class="morning">
-          <i><img src="" alt="" /></i>
+          <i><img src="/src/assets/sun.svg" alt="" /></i>
           <h2>Manhã</h2>
           <span>09h-12h</span>
         </header>
@@ -50,7 +55,7 @@
         </ul>
 
         <header class="evening">
-          <i><img src="" alt="" /></i>
+          <i><img src="/src/assets/cloud.svg" alt="" /></i>
           <h2>Tarde</h2>
           <span>13h-18h</span>
         </header>
@@ -70,7 +75,7 @@
         </ul>
 
         <header class="night">
-          <i><img src="" alt="" /></i>
+          <i><img src="/src/assets/moon.svg" alt="" /></i>
           <h2>Noite</h2>
           <span>18h-21h</span>
         </header>
@@ -94,19 +99,19 @@
 
         <label for="tutor-name" class="label">Nome do tutor</label>
         <div class="input">
-          <i><img src="./src/assets/" alt="tutor-name" /></i>
+          <i><img src="./src/assets/user.svg" alt="tutor-name" /></i>
           <input type="text" id="tutor-name" name="tutor-name" required />
         </div>
 
         <label for="pet-name" class="label">Nome do pet</label>
         <div class="input">
-          <i><img src="./src/assets/" alt="pet-name" /></i>
+          <i><img src="./src/assets/petPaw.svg" alt="pet-name" /></i>
           <input type="text" id="pet-name" name="pet-name" required />
         </div>
 
         <label for="telephone" class="label">Telefone</label>
         <div class="input">
-          <i><img src="./src/assets/" alt="telephone" /></i>
+          <i><img src="./src/assets/phone.svg" alt="telephone" /></i>
           <input type="text" id="telephone" name="telephone" required />
         </div>
 
@@ -116,15 +121,15 @@
           <input type="text" id="description" name="description" required />
         </div>
 
-        <label for="date" class="label">Data</label>
+        <label for="form-date" class="label">Data</label>
         <div class="input">
-          <i><img src="./src/assets/" alt="date" /></i>
-          <input type="date" id="date" name="date" required />
+          <i><img src="./src/assets/calendar.svg" alt="date" /></i>
+          <input type="date" id="form-date" name="date" required />
         </div>
 
         <label for="hour" class="label">Hora</label>
         <div class="input">
-          <i><img src="./src/assets/" alt="hour" /></i>
+          <i><img src="./src/assets/clock.svg" alt="hour" /></i>
           <input type="time" id="hour" name="hour" required />
         </div>
 
