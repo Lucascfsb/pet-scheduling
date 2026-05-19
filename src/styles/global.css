@@ -80,11 +80,13 @@ body {
     & h1 {
       font: var(--title);
       color: var(--content-primary);
+      margin-bottom: 4px;
     }
 
     & p {
       font: var(--paragraph-medium);
       color: var(--content-secondary);
+      margin-right: 80px;
     }
   }
 
@@ -95,13 +97,16 @@ body {
     background: var(--background-tertiary);
     border: 1px solid var(--border-primary);
     border-radius: 8px;
+    margin-top: 5px;
     padding: 8px 14px;
     max-width: 200px;
     position: relative;
+    height: 48px;
 
     & i img {
       object-fit: contain;
       border: none;
+      color: var(--content-primary);
     }
 
     input[type="date"] {
