@@ -1,7 +1,6 @@
 section {
   display: flex;
   flex-direction: column;
-  border: red solid 1px;
   gap: 12px; 
 
   & .morning, .evening, .night {
@@ -11,6 +10,7 @@ section {
     background: var(--background-tertiary);
     border-radius: 20px 20px 0 0;
     border-bottom: 1px solid var(--border-divisor);
+    height: 48px;
 
     & i {
       margin: 14px 12px 14px 20px;
@@ -19,7 +19,7 @@ section {
     & h2 {
       color: var(--content-primary);
       font: var(--label-large);
-      margin-right: 564px;
+      margin-right: 544px;
       margin-top: 12px;
       margin-bottom: 12px;
     }
@@ -40,15 +40,31 @@ section {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      position: relative;
+      border-bottom: none;
       
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        bottom: 0;
+        height: 0.5px;
+        background: var(--border-divisor);
+        border-radius: 2px;
+        z-index: 0;
+      }
 
       & span {
         color: var(--content-primary);
         font: var(--label-small);
         margin: 14px 12px 14px 20px;
-        
+        position: relative;
       }
     }
-
   }
 }
