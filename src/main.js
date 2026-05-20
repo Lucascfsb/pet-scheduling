@@ -5,6 +5,7 @@
 
 //CSS
 import "./styles/global.css";
+import "./styles/schedule.css";
 
 //JS
 document.addEventListener("DOMContentLoaded", () => {
