@@ -21,9 +21,8 @@ section {
     & h2 {
       color: var(--content-primary);
       font: var(--label-large);
-      margin-right: 544px;
-      margin-top: 12px;
-      margin-bottom: 12px;
+      margin: 12px 544px 12px 0;
+      flex: 1;
     }
 
     & span {
@@ -40,7 +39,6 @@ section {
 
     & li {
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
       align-items: center;
       position: relative;
@@ -62,21 +60,18 @@ section {
         height: 0.5px;
         background: var(--border-divisor);
         border-radius: 2px;
-        z-index: 0;
       }
 
       & span {
         color: var(--content-primary);
         font: var(--label-small);
         margin: 16px 16px 16px 12px;
-        position: relative;
       }
 
       & .dog-owner {
         color: var(--content-secondary);
         font: var(--paragraph-small);
         margin: 16px 16px 16px 0;
-        position: relative;
 
         & strong {
           font: var(--label-small);
@@ -88,7 +83,6 @@ section {
         color: var(--content-secondary);
         font: var(--paragraph-small);
         margin: 16px 16px 16px 0;
-        position: relative;
       }
 
       & a {
