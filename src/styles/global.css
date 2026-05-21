@@ -56,6 +56,10 @@ body {
   flex-direction: column;
 }
 
+main {
+  padding: 0 80px 0 80px;
+}
+
 .logo {
   align-self: flex-start;
   display: flex;
@@ -182,4 +186,8 @@ body {
       opacity: 0.7;
     }
   }
+}
+
+.hidden {
+  display: none;
 }
