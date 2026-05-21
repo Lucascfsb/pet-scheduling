@@ -98,14 +98,19 @@ section {
         text-decoration: none;
         margin: 16px 19.5px 16px 0;
 
+        &:hover {
+          text-decoration: underline;
+          color: var(--content-primary);
+        }
       }
     }
   }
 
   & .new-schedule {
-    position: absolute;
-    right: 40px;
-    bottom: 40px;
+    position: fixed;
+    right: 36px;
+    bottom: 36px;
+    width: 230px;
     background: var(--content-brand);
     font: var(--label-large);
     border-radius: 8px;
