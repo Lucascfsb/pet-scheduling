@@ -1,9 +1,13 @@
 section {
   display: flex;
   flex-direction: column;
-  gap: 12px; 
+  gap: 12px;
 
-  & .morning, .evening, .night {
+  
+
+  & .morning,
+  .evening,
+  .night {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,6 +38,7 @@ section {
   ul {
     background: var(--background-tertiary);
     border-radius: 0 0 20px 20px;
+    padding: 20px;
 
     & li {
       display: flex;
@@ -42,9 +47,12 @@ section {
       align-items: center;
       position: relative;
       border-bottom: none;
-      
+      padding: 0 12px;
+      margin-bottom: 12px;
+
       &:last-child {
         border-bottom: none;
+        margin-bottom: 0;
       }
 
       &:not(:last-child)::after {
@@ -62,8 +70,36 @@ section {
       & span {
         color: var(--content-primary);
         font: var(--label-small);
-        margin: 14px 12px 14px 20px;
+        margin: 16px 16px 16px 12px;
         position: relative;
+      }
+
+      & .dog-owner {
+        color: var(--content-secondary);
+        font: var(--paragraph-small);
+        margin: 16px 16px 16px 0;
+        position: relative;
+
+        & strong {
+          font: var(--label-small);
+          color: var(--content-primary);
+        }
+      }
+
+      & .service {
+        color: var(--content-secondary);
+        font: var(--paragraph-small);
+        margin: 16px 16px 16px 0;
+        position: relative;
+      }
+
+      & a {
+        color: var(--content-tertiary);
+        font: var(--paragraph-small);
+        position: relative;
+        text-decoration: none;
+        margin: 16px 19.5px 16px 0;
+
       }
     }
   }
