@@ -1,5 +1,166 @@
-form {
-	position: fixed;
-	top: 50%;
-	left: 50%;
+form.modal {
+  position: fixed;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  background: var(--background-tertiary);
+  border: 1px solid var(--border-primary);
+  border-radius: 16px;
+  padding: 30px 40px;
+  z-index: 1100;
+
+  & .header-form {
+    display: grid;
+    gap: 4px;
+    margin-bottom: 18px;
+
+    & h1 {
+      font: var(--title);
+      color: var(--content-primary);
+    }
+    & p {
+      font: var(--paragraph-medium);
+      color: var(--content-secondary);
+    }
+  }
+
+  & .date-hour {
+    display: flex;
+    gap: 14px;
+    flex: 1;
+
+    & .modal-date::-webkit-calendar-picker-indicator,
+    & .modal-time::-webkit-calendar-picker-indicator {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      opacity: 0; /* invisível, mas ainda clicável */
+      z-index: 3;
+      cursor: pointer;
+      pointer-events: auto;
+    }
+  }
+
+  & .button-row {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  & button {
+    margin-top: 12px;
+  }
+}
+
+.label {
+  display: flex;
+  font: var(--label-medium);
+  color: var(--content-primary);
+  margin-bottom: 4px;
+}
+
+.input-div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: color-mix(in srgb, var(--background-secondary) 65%, transparent);
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  padding: 12px 12px;
+  margin-bottom: 14px;
+
+  & input,
+  & textarea {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--content-primary);
+    font: var(--inter);
+    width: 100%;
+    &::placeholder {
+      color: var(--content-secondary);
+    }
+  }
+
+  &.description {
+    align-items: flex-start;
+    & textarea {
+      min-height: 64px;
+      max-height: 120px;
+      resize: vertical;
+    }
+  }
+}
+
+button {
+  background: var(--content-brand);
+  font: var(--label-large);
+  border-radius: 8px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 12px;
+  &:hover {
+    background: var(--background-highlights);
+  }
+}
+
+.input-div.hour,
+.input-div.time {
+  position: relative;
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  form.modal {
+    width: min(520px, 92vw);
+    max-height: 88vh;
+    padding: 24px 28px;
+  }
+
+  .input-div.hour,
+  .input-div.time {
+    width: 180px;
+    min-width: 180px;
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  form.modal {
+    margin-top: 72px;
+    inset: 12px;
+    transform: none;
+    width: auto;
+    max-height: calc(100vh - 32px);
+    padding: 20px 18px;
+  }
+
+  form.modal .date-hour {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .input-div.hour,
+  .input-div.time {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  form.modal .button-row {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  form.modal .button-row button {
+    width: 150px;
+  }
+
 }

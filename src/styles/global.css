@@ -69,6 +69,7 @@ main {
   gap: 2px;
   padding: 12px 20px;
   border-radius: 0 0 20px 0;
+  z-index: 999;
 
   & h1 {
     font: var(--logo);
@@ -132,15 +133,16 @@ main {
 
     /* Esconde o ícone padrão do input de data no Chrome */
     input[type="date"]::-webkit-calendar-picker-indicator {
-      opacity: 0;
-      width: 100%;
+      opacity: 1;
+      width: 20px;
       height: 20px;
       cursor: pointer;
       position: absolute;
-      right: 10px;
+      right: -10px;
       top: 50%;
       transform: translateY(-50%);
-      z-index: 1;
+      z-index: 91;
+      border: red solid 1px; /* Apenas para visualização, remova depois */
     }
 
     /* Placeholder para browsers que suportam */
@@ -174,17 +176,55 @@ main {
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      border: blue solid 1px; /* Apenas para visualização, remova depois */
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  main {
+    padding: 0 32px;
+  }
+
+  .header-calendar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    & .header-info {
+      margin-bottom: 0;
+
+      & p {
+        margin-right: 0;
+      }
     }
 
-    & .date-arrow img {
-      width: 20px;
-      height: 20px;
-      transition: opacity 0.2s ease;
+    & .input-calendar {
+      width: 100%;
+      max-width: 320px;
     }
+  }
+}
 
-    & .date-arrow:hover img {
-      opacity: 0.7;
-    }
+@media (max-width: 600px) {
+  body {
+    align-items: stretch;
+  }
+
+  main {
+    padding: 0 16px 120px;
+  }
+
+  .logo {
+    max-width: 180px;
+  }
+
+  .header-calendar {
+    padding: 0 16px;
+  }
+
+  .header-calendar .input-calendar {
+    max-width: 100%;
   }
 }
 

@@ -120,3 +120,87 @@ section {
     }
   }
 }
+
+@media (max-width: 1024px) {
+  section {
+    gap: 16px;
+
+    & .morning,
+    .evening,
+    .night {
+      padding-right: 8px;
+
+      & h2 {
+        margin: 12px 0;
+      }
+    }
+
+    ul {
+      padding: 16px;
+
+      & li {
+        gap: 8px;
+
+        & span,
+        & .dog-owner,
+        & .service,
+        & a {
+          margin: 12px 8px 12px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    & .morning,
+    .evening,
+    .night {
+      height: auto;
+      padding: 10px 12px;
+      align-items: center;
+
+      & i {
+        margin: 0 8px 0 0;
+      }
+
+      & h2 {
+        margin: 0;
+      }
+
+      & span {
+        margin: 0;
+      }
+    }
+
+    ul {
+      padding: 12px;
+
+      & li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 4px;
+
+        & span,
+        & .dog-owner,
+        & .service,
+        & a {
+          margin: 4px 0 0 0;
+        }
+
+        &:not(:last-child)::after {
+          left: 8px;
+          right: 8px;
+        }
+      }
+    }
+
+    & .new-schedule {
+      left: 16px;
+      right: 16px;
+      width: auto;
+      bottom: 16px;
+    }
+  }
+}
