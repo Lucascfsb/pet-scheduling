@@ -6,7 +6,7 @@ form.modal {
   background: var(--background-tertiary);
   border: 1px solid var(--border-primary);
   border-radius: 16px;
-  padding: 30px 40px;
+  padding: 25px 40px;
   z-index: 1100;
 
   & .header-form {
@@ -51,6 +51,10 @@ form.modal {
 
   & button {
     margin-top: 12px;
+  }
+
+  .close-button{
+    display: none;
   }
 }
 
@@ -102,7 +106,6 @@ form.modal {
   border-color: var(--border-brand);
 }
 
-
 button {
   background: var(--content-brand);
   font: var(--label-large);
@@ -143,11 +146,11 @@ button {
 
 @media (max-width: 600px) {
   form.modal {
-    margin-top: 72px;
+    margin-top: 56px;
     inset: 12px;
     transform: none;
     width: auto;
-    max-height: calc(100vh - 32px);
+    max-height: calc(100vh - 32px); 
     padding: 20px 18px;
   }
 
@@ -172,4 +175,13 @@ button {
     width: 150px;
   }
 
+  form.modal .close-button{
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    margin-left: auto;
+  }
 }
