@@ -94,6 +94,15 @@ form.modal {
   }
 }
 
+.input-div:hover {
+  border-color: var(--border-secondary);
+}
+
+.input-div:focus-within {
+  border-color: var(--border-brand);
+}
+
+
 button {
   background: var(--content-brand);
   font: var(--label-large);
