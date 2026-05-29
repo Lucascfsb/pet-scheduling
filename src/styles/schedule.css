@@ -124,6 +124,7 @@ section {
 @media (max-width: 1024px) {
   section {
     gap: 16px;
+    margin-top: 32px;
 
     & .morning,
     .evening,
@@ -143,14 +144,19 @@ section {
 
         & span,
         & .dog-owner,
-        & .service,
-        & a {
+        & .service{
           margin: 12px 8px 12px 0;
+        }
+
+        & a {
+          align-self: flex-end;
+          margin: 8px 12px 12px 0;
         }
       }
     }
   }
 }
+
 
 @media (max-width: 600px) {
   section {
@@ -184,9 +190,14 @@ section {
 
         & span,
         & .dog-owner,
-        & .service,
-        & a {
+        & .service
+        {
           margin: 4px 0 0 0;
+        }
+
+        & a {
+          align-self: flex-end;
+          margin: 8px 12px 12px 0;
         }
 
         &:not(:last-child)::after {
@@ -197,9 +208,12 @@ section {
     }
 
     & .new-schedule {
+      position: relative;
+      align-self: center;
+      margin-top: 24px;
       left: 16px;
       right: 16px;
-      width: auto;
+      width: 230px;
       bottom: 16px;
     }
   }

@@ -133,7 +133,7 @@ main {
 
     /* Esconde o ícone padrão do input de data no Chrome */
     input[type="date"]::-webkit-calendar-picker-indicator {
-      opacity: 1;
+      opacity: 0;
       width: 24px;
       height: 24px;
       cursor: pointer;
@@ -190,6 +190,7 @@ main {
     gap: 16px;
 
     & .header-info {
+      margin-top: 21px;
       margin-bottom: 0;
 
       & p {
@@ -198,7 +199,7 @@ main {
     }
 
     & .input-calendar {
-      width: 100%;
+      width: 183px;
       max-width: 320px;
     }
   }
