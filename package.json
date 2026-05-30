@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "dev": "webpack serve",
-    "server": "json-server --watch server.json --port 3333"
+    "server": "json-server --watch server.json --port $PORT"  
   },
   "dependencies": {
     "dayjs": "^1.11.20",
