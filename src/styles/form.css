@@ -8,54 +8,55 @@ form.modal {
   border-radius: 16px;
   padding: 25px 40px;
   z-index: 1100;
+}
 
-  & .header-form {
-    display: grid;
-    gap: 4px;
-    margin-bottom: 18px;
+form.modal .header-form {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 18px;
+}
 
-    & h1 {
-      font: var(--title);
-      color: var(--content-primary);
-    }
-    & p {
-      font: var(--paragraph-medium);
-      color: var(--content-secondary);
-    }
-  }
+form.modal .header-form h1 {
+  font: var(--title);
+  color: var(--content-primary);
+}
 
-  & .date-hour {
-    display: flex;
-    gap: 14px;
-    flex: 1;
+form.modal .header-form p {
+  font: var(--paragraph-medium);
+  color: var(--content-secondary);
+}
 
-    & .modal-date::-webkit-calendar-picker-indicator,
-    & .modal-time::-webkit-calendar-picker-indicator {
-      position: absolute;
-      right: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 20px;
-      height: 20px;
-      opacity: 0; /* invisível, mas ainda clicável */
-      z-index: 3;
-      cursor: pointer;
-      pointer-events: auto;
-    }
-  }
+form.modal .date-hour {
+  display: flex;
+  gap: 14px;
+  flex: 1;
+}
 
-  & .button-row {
-    display: flex;
-    justify-content: flex-end;
-  }
+form.modal .date-hour .modal-date::-webkit-calendar-picker-indicator,
+form.modal .date-hour .modal-time::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  opacity: 0; /* invisível, mas ainda clicável */
+  z-index: 3;
+  cursor: pointer;
+  pointer-events: auto;
+}
 
-  & button {
-    margin-top: 12px;
-  }
+form.modal .button-row {
+  display: flex;
+  justify-content: flex-end;
+}
 
-  .close-button{
-    display: none;
-  }
+form.modal button {
+  margin-top: 12px;
+}
+
+form.modal .close-button {
+  display: none;
 }
 
 .modal-backdrop {
@@ -94,33 +95,36 @@ form.modal {
   border-radius: 8px;
   padding: 12px 12px;
   margin-bottom: 14px;
+}
 
-  & input,
-  & textarea,
-  & select {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: var(--content-primary);
-    font: var(--inter);
-    width: 100%;
-    &::placeholder {
-      color: var(--content-secondary);
-    }
-  }
+.input-div input,
+.input-div textarea,
+.input-div select {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--content-primary);
+  font: var(--inter);
+  width: 100%;
+}
 
-  & select {
-    cursor: pointer;
-  }
+.input-div input::placeholder,
+.input-div textarea::placeholder {
+  color: var(--content-secondary);
+}
 
-  &.description {
-    align-items: flex-start;
-    & textarea {
-      min-height: 64px;
-      max-height: 120px;
-      resize: vertical;
-    }
-  }
+.input-div select {
+  cursor: pointer;
+}
+
+.input-div.description {
+  align-items: flex-start;
+}
+
+.input-div.description textarea {
+  min-height: 64px;
+  max-height: 120px;
+  resize: vertical;
 }
 
 .input-div:hover {
@@ -140,9 +144,10 @@ button {
   cursor: pointer;
   transition: background 0.2s;
   margin-top: 12px;
-  &:hover {
-    background: var(--background-highlights);
-  }
+}
+
+button:hover {
+  background: var(--background-highlights);
 }
 
 .input-div.hour,
@@ -161,6 +166,9 @@ button {
   padding-left: 40px;
   padding-right: 40px;
   z-index: 1;
+  border-radius: 8px;
+  border: 1px solid var(--border-primary);
+  background: var(--background-secondary);
 }
 
 .input-div.time i,
@@ -191,7 +199,7 @@ button {
     inset: 12px;
     transform: none;
     width: auto;
-    max-height: calc(100vh - 32px); 
+    max-height: calc(100vh - 32px);
     padding: 20px 18px;
   }
 
@@ -216,7 +224,7 @@ button {
     width: 150px;
   }
 
-  form.modal .close-button{
+  form.modal .close-button {
     display: flex;
     align-self: flex-end;
     justify-content: center;

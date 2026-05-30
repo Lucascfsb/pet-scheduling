@@ -2,230 +2,242 @@ section {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
 
-  & .morning,
-  .evening,
-  .night {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background: var(--background-tertiary);
-    border-radius: 20px 20px 0 0;
-    border-bottom: 1px solid var(--border-divisor);
-    height: 48px;
+section .morning,
+section .evening,
+section .night {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: var(--background-tertiary);
+  border-radius: 20px 20px 0 0;
+  border-bottom: 1px solid var(--border-divisor);
+  height: 48px;
+}
 
-    & i {
-      margin: 14px 12px 14px 20px;
-    }
+section .morning i,
+section .evening i,
+section .night i {
+  margin: 14px 12px 14px 20px;
+}
 
-    & h2 {
-      color: var(--content-primary);
-      font: var(--label-large);
-      margin: 12px 544px 12px 0;
-      flex: 1;
-    }
+section .morning h2,
+section .evening h2,
+section .night h2 {
+  color: var(--content-primary);
+  font: var(--label-large);
+  margin: 12px 544px 12px 0;
+  flex: 1;
+}
 
-    & span {
-      color: var(--content-secondary);
-      font: var(--label-large);
-      margin: 14px 20px 14px 12px;
-    }
-  }
+section .morning span,
+section .evening span,
+section .night span {
+  color: var(--content-secondary);
+  font: var(--label-large);
+  margin: 14px 20px 14px 12px;
+}
 
-  ul {
-    background: var(--background-tertiary);
-    border-radius: 0 0 20px 20px;
-    padding: 20px;
+section ul {
+  background: var(--background-tertiary);
+  border-radius: 0 0 20px 20px;
+  padding: 20px;
+}
 
-    & li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      border-bottom: none;
-      padding: 0 12px;
-      margin-bottom: 12px;
+section ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-bottom: none;
+  padding: 0 12px;
+  margin-bottom: 12px;
+}
 
-      &:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-      }
+section ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
 
-      &:not(:last-child)::after {
-        content: "";
-        position: absolute;
-        left: 16px;
-        right: 16px;
-        bottom: 0;
-        height: 0.5px;
-        background: var(--border-divisor);
-        border-radius: 2px;
-      }
+section ul li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 0;
+  height: 0.5px;
+  background: var(--border-divisor);
+  border-radius: 2px;
+}
 
-      & span {
-        color: var(--content-primary);
-        font: var(--label-small);
-        margin: 16px 16px 16px 12px;
-      }
+section ul li span {
+  color: var(--content-primary);
+  font: var(--label-small);
+  margin: 16px 16px 16px 12px;
+}
 
-      & .dog-owner {
-        color: var(--content-secondary);
-        font: var(--paragraph-small);
-        margin: 16px 16px 16px 0;
+section ul li .dog-owner {
+  color: var(--content-secondary);
+  font: var(--paragraph-small);
+  margin: 16px 16px 16px 0;
+}
 
-        & strong {
-          font: var(--label-small);
-          color: var(--content-primary);
-        }
-      }
+section ul li .dog-owner strong {
+  font: var(--label-small);
+  color: var(--content-primary);
+}
 
-      & .service {
-        color: var(--content-secondary);
-        font: var(--paragraph-small);
-        margin: 16px 16px 16px 0;
-      }
+section ul li .service {
+  color: var(--content-secondary);
+  font: var(--paragraph-small);
+  margin: 16px 16px 16px 0;
+}
 
-      & a,
-      & .remove-schedule {
-        color: var(--content-tertiary);
-        font: var(--paragraph-small);
-        position: relative;
-        text-decoration: none;
-        margin: 16px 19.5px 16px 0;
-        background: transparent;
-        border: none;
-        padding: 0;
-        cursor: pointer;
+section ul li a,
+section ul li .remove-schedule {
+  color: var(--content-tertiary);
+  font: var(--paragraph-small);
+  position: relative;
+  text-decoration: none;
+  margin: 16px 19.5px 16px 0;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
 
-        &:hover {
-          text-decoration: underline;
-          color: var(--content-primary);
-        }
-      }
-    }
-  }
+section ul li a:hover,
+section ul li .remove-schedule:hover {
+  text-decoration: underline;
+  color: var(--content-primary);
+}
 
-  .empty-state {
-    color: var(--content-secondary);
-    font: var(--paragraph-small);
-    padding: 8px 12px;
-  }
+section .empty-state {
+  color: var(--content-secondary);
+  font: var(--paragraph-small);
+  padding: 8px 12px;
+}
 
-  & .new-schedule {
-    position: fixed;
-    right: 36px;
-    bottom: 36px;
-    width: 230px;
-    background: var(--content-brand);
-    font: var(--label-large);
-    border-radius: 8px;
-    padding: 12px 24px;
-    border: none;
-    box-shadow: 0 4px 24px 0 #a78bfa55;
-    cursor: pointer;
-    transition: background 0.2s;
-    z-index: 1000;
+section .new-schedule {
+  position: fixed;
+  right: 36px;
+  bottom: 36px;
+  width: 230px;
+  background: var(--content-brand);
+  font: var(--label-large);
+  border-radius: 8px;
+  padding: 12px 24px;
+  border: none;
+  box-shadow: 0 4px 24px 0 #a78bfa55;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 1000;
+}
 
-    &:hover {
-      background: var(--background-highlights);
-    }
-  }
+section .new-schedule:hover {
+  background: var(--background-highlights);
 }
 
 @media (max-width: 1024px) {
   section {
     gap: 16px;
     margin-top: 32px;
+  }
 
-    & .morning,
-    .evening,
-    .night {
-      padding-right: 8px;
+  section .morning,
+  section .evening,
+  section .night {
+    padding-right: 8px;
+  }
 
-      & h2 {
-        margin: 12px 0;
-      }
-    }
+  section .morning h2,
+  section .evening h2,
+  section .night h2 {
+    margin: 12px 0;
+  }
 
-    ul {
-      padding: 16px;
+  section ul {
+    padding: 16px;
+  }
 
-      & li {
-        gap: 8px;
+  section ul li {
+    gap: 8px;
+  }
 
-        & span,
-        & .dog-owner,
-        & .service{
-          margin: 12px 8px 12px 0;
-        }
+  section ul li span,
+  section ul li .dog-owner,
+  section ul li .service {
+    margin: 12px 8px 12px 0;
+  }
 
-        & a {
-          align-self: flex-end;
-          margin: 8px 12px 12px 0;
-        }
-      }
-    }
+  section ul li a {
+    align-self: flex-end;
+    margin: 8px 12px 12px 0;
   }
 }
 
 
 @media (max-width: 600px) {
-  section {
-    & .morning,
-    .evening,
-    .night {
-      height: auto;
-      padding: 10px 12px;
-      align-items: center;
+  section .morning,
+  section .evening,
+  section .night {
+    height: auto;
+    padding: 10px 12px;
+    align-items: center;
+  }
 
-      & i {
-        margin: 0 8px 0 0;
-      }
+  section .morning i,
+  section .evening i,
+  section .night i {
+    margin: 0 8px 0 0;
+  }
 
-      & h2 {
-        margin: 0;
-      }
+  section .morning h2,
+  section .evening h2,
+  section .night h2 {
+    margin: 0;
+  }
 
-      & span {
-        margin: 0;
-      }
-    }
+  section .morning span,
+  section .evening span,
+  section .night span {
+    margin: 0;
+  }
 
-    ul {
-      padding: 12px;
+  section ul {
+    padding: 12px;
+  }
 
-      & li {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 8px 4px;
+  section ul li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 4px;
+  }
 
-        & span,
-        & .dog-owner,
-        & .service
-        {
-          margin: 4px 0 0 0;
-        }
+  section ul li span,
+  section ul li .dog-owner,
+  section ul li .service {
+    margin: 4px 0 0 0;
+  }
 
-        & a {
-          align-self: flex-end;
-          margin: 8px 12px 12px 0;
-        }
+  section ul li a {
+    align-self: flex-end;
+    margin: 8px 12px 12px 0;
+  }
 
-        &:not(:last-child)::after {
-          left: 8px;
-          right: 8px;
-        }
-      }
-    }
+  section ul li:not(:last-child)::after {
+    left: 8px;
+    right: 8px;
+  }
 
-    & .new-schedule {
-      position: relative;
-      align-self: center;
-      margin-top: 24px;
-      left: 16px;
-      right: 16px;
-      width: 230px;
-      bottom: 16px;
-    }
+  section .new-schedule {
+    position: relative;
+    align-self: center;
+    margin-top: 24px;
+    left: 16px;
+    right: 16px;
+    width: 230px;
+    bottom: 16px;
   }
 }

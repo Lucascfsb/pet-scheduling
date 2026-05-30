@@ -33,19 +33,19 @@
   --font-family-body: "Inter", sans-serif;
   --font-family-brand: "Familjen Grotesk", sans-serif;
 
-  --title: 700 24px/32px var(--font-family-title); 
-  --inter: 400 16px/24px var(--font-family-title); 
+  --title: 700 24px/32px var(--font-family-title);
+  --inter: 400 16px/24px var(--font-family-title);
 
-  --paragraph-medium: 500 14px/24px var(--font-family-body); 
-  --paragraph-small: 500 12px/16px var(--font-family-body); 
+  --paragraph-medium: 500 14px/24px var(--font-family-body);
+  --paragraph-small: 500 12px/16px var(--font-family-body);
 
-  --label-large: 700 16px/24px var(--font-family-body); 
-  --label-medium: 700 14px/24px var(--font-family-body); 
-  --label-small: 700 12px/16px var(--font-family-body); 
+  --label-large: 700 16px/24px var(--font-family-body);
+  --label-medium: 700 14px/24px var(--font-family-body);
+  --label-small: 700 12px/16px var(--font-family-body);
 
-  --link: 500 12px/16px var(--font-family-body); 
+  --link: 500 12px/16px var(--font-family-body);
 
-  --logo: 700 16px/24px var(--font-family-brand); 
+  --logo: 700 16px/24px var(--font-family-brand);
 }
 
 body {
@@ -74,113 +74,114 @@ main {
   padding: 12px 20px;
   border-radius: 0 0 20px 0;
   z-index: 999;
+}
 
-  & h1 {
-    font: var(--logo);
-    color: var(--border-brand);
-  }
+.logo h1 {
+  font: var(--logo);
+  color: var(--border-brand);
 }
 
 .header-calendar {
   display: flex;
   gap: 8px;
+}
 
-  & .header-info {
-    margin-bottom: 32px;
-    & h1 {
-      font: var(--title);
-      color: var(--content-primary);
-      margin-bottom: 4px;
-    }
+.header-calendar .header-info {
+  margin-bottom: 32px;
+}
 
-    & p {
-      font: var(--paragraph-medium);
-      color: var(--content-secondary);
-      margin-right: 80px;
-    }
-  }
+.header-calendar .header-info h1 {
+  font: var(--title);
+  color: var(--content-primary);
+  margin-bottom: 4px;
+}
 
-  & .input-calendar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--background-tertiary);
-    border: 1px solid var(--border-primary);
-    border-radius: 8px;
-    margin-top: 5px;
-    padding: 8px 14px;
-    max-width: 200px;
-    position: relative;
-    height: 48px;
+.header-calendar .header-info p {
+  font: var(--paragraph-medium);
+  color: var(--content-secondary);
+  margin-right: 80px;
+}
 
-    & i img {
-      object-fit: contain;
-      border: none;
-      color: var(--content-primary);
-    }
+.header-calendar .input-calendar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--background-tertiary);
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  margin-top: 5px;
+  padding: 8px 14px;
+  max-width: 200px;
+  position: relative;
+  height: 48px;
+}
 
-    input[type="date"] {
-      background: transparent;
-      color: var(--content-secondary);
-      border: none;
-      outline: none;
-      font: var(--inter);
-      width: 100%;
-      padding: 0;
-      text-align: left;
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      position: relative;
-      z-index: 2;
-    }
+.header-calendar .input-calendar i img {
+  object-fit: contain;
+  border: none;
+  color: var(--content-primary);
+}
 
-    /* Esconde o ícone padrão do input de data no Chrome */
-    input[type="date"]::-webkit-calendar-picker-indicator {
-      opacity: 0;
-      width: 24px;
-      height: 24px;
-      cursor: pointer;
-      position: absolute;
-      right: -10px;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 91;
-    }
+.header-calendar .input-calendar input[type="date"] {
+  background: transparent;
+  color: var(--content-secondary);
+  border: none;
+  outline: none;
+  font: var(--inter);
+  width: 100%;
+  padding: 0;
+  text-align: left;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  z-index: 2;
+}
 
-    /* Placeholder para browsers que suportam */
-    input[type="date"]::placeholder {
-      color: var(--content-secondary);
-      opacity: 1;
-    }
+/* Esconde o ícone padrão do input de data no Chrome */
+.header-calendar .input-calendar input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 91;
+}
 
-    /* Ajuste para o input de data no Firefox */
-    input[type="date"]::-moz-placeholder {
-      color: var(--content-secondary);
-      opacity: 1;
-    }
+/* Placeholder para browsers que suportam */
+.header-calendar .input-calendar input[type="date"]::placeholder {
+  color: var(--content-secondary);
+  opacity: 1;
+}
 
-    /* Remove setas do input de data no Edge/IE */
-    input[type="date"]::-ms-input-placeholder {
-      color: var(--content-secondary);
-      opacity: 1;
-    }
+/* Ajuste para o input de data no Firefox */
+.header-calendar .input-calendar input[type="date"]::-moz-placeholder {
+  color: var(--content-secondary);
+  opacity: 1;
+}
 
-    /* Ajuste para o icone de seta */
-    & .date-arrow {
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 0;
-      width: 20px;
-      height: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-  }
+/* Remove setas do input de data no Edge/IE */
+.header-calendar .input-calendar input[type="date"]::-ms-input-placeholder {
+  color: var(--content-secondary);
+  opacity: 1;
+}
+
+/* Ajuste para o icone de seta */
+.header-calendar .input-calendar .date-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {
@@ -192,20 +193,20 @@ main {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+  }
 
-    & .header-info {
-      margin-top: 21px;
-      margin-bottom: 0;
+  .header-calendar .header-info {
+    margin-top: 21px;
+    margin-bottom: 0;
+  }
 
-      & p {
-        margin-right: 0;
-      }
-    }
+  .header-calendar .header-info p {
+    margin-right: 0;
+  }
 
-    & .input-calendar {
-      width: 183px;
-      max-width: 320px;
-    }
+  .header-calendar .input-calendar {
+    width: 183px;
+    max-width: 320px;
   }
 }
 

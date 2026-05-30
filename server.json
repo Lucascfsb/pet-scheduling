@@ -1,4 +1,23 @@
 {
-  "schedules": [],
+  "schedules": [
+    {
+      "tutor": "Lucas Castro",
+      "pet": "Rex",
+      "phone": "21995272333",
+      "description": "Tosa",
+      "date": "2026-06-01",
+      "time": "10:00",
+      "id": "mlCnDZvXOgw"
+    },
+    {
+      "tutor": "Clara Castro",
+      "pet": "Zorrp",
+      "phone": "21999587515",
+      "description": "Corta as unhas",
+      "date": "2026-06-01",
+      "time": "14:00",
+      "id": "3G-a44rpoZM"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
