@@ -1,7 +1,6 @@
+import { API_URL } from "./apiConfig";
 
-import { apiConfig } from "./apiConfig";
-
-const SCHEDULES_URL = `${apiConfig.baseUrl}/schedules`;
+const SCHEDULES_URL = `${API_URL}/schedules`;
 
 const fetchSchedules = async (date) => {
 	const response = await fetch(`${SCHEDULES_URL}?date=${encodeURIComponent(date)}`);
