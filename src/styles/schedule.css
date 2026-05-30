@@ -85,12 +85,17 @@ section {
         margin: 16px 16px 16px 0;
       }
 
-      & a {
+      & a,
+      & .remove-schedule {
         color: var(--content-tertiary);
         font: var(--paragraph-small);
         position: relative;
         text-decoration: none;
         margin: 16px 19.5px 16px 0;
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
 
         &:hover {
           text-decoration: underline;
@@ -98,6 +103,12 @@ section {
         }
       }
     }
+  }
+
+  .empty-state {
+    color: var(--content-secondary);
+    font: var(--paragraph-small);
+    padding: 8px 12px;
   }
 
   & .new-schedule {

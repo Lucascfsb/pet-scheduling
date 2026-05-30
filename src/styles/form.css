@@ -58,6 +58,26 @@ form.modal {
   }
 }
 
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 1050;
+}
+
+.field-error {
+  color: #f5a4a4;
+  font: var(--paragraph-small);
+  margin: -6px 0 10px 0;
+}
+
+.form-error {
+  color: #f5a4a4;
+  font: var(--paragraph-medium);
+  margin: 8px 0 12px 0;
+}
+
 .label {
   display: flex;
   font: var(--label-medium);
@@ -76,7 +96,8 @@ form.modal {
   margin-bottom: 14px;
 
   & input,
-  & textarea {
+  & textarea,
+  & select {
     background: transparent;
     border: none;
     outline: none;
@@ -86,6 +107,10 @@ form.modal {
     &::placeholder {
       color: var(--content-secondary);
     }
+  }
+
+  & select {
+    cursor: pointer;
   }
 
   &.description {
@@ -127,6 +152,22 @@ button {
   min-width: 200px;
   max-width: 200px;
   box-sizing: border-box;
+  cursor: pointer;
+}
+
+.input-div.time select {
+  position: absolute;
+  inset: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  z-index: 1;
+}
+
+.input-div.time i,
+.input-div.time img {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
 }
 
 @media (max-width: 1024px) {
